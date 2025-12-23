@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Pets Custom Objects
+        p 
+            a(href="/update-cobj") Add to this table
+        
+        table(style="width: 100%; border-collapse: collapse; margin: 2rem;")
+            thead
+                tr
+                    th(style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;") Pet Name
+                    th(style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;") Pet Type
+                    th(style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;") Pet Age
+            tbody
+                each pet in data
+                    tr
+                        td(style="border: 1px solid #ddd; padding: 8px;") #{pet.properties.pet_name}
+                        td(style="border: 1px solid #ddd; padding: 8px;") #{pet.properties.pet_type}
+                        td(style="border: 1px solid #ddd; padding: 8px;") #{pet.properties.pet_age}
